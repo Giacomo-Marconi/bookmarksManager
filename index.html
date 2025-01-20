@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Favorite Sites Manager</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Settings</h2>
+            <nav class="sidebar-nav">
+                <a id="all" href="#" class="active" onclick="loadCard();">All Sites</a>
+                <!-- <a id="cat" href="#">Categories</a> -->
+                <!-- <a href="#">Tags</a> -->
+                <a id="fav" href="#" onclick="loadPreferiti();">Favorites</a>
+                <a id="rec" href="#" onclick="loadRec();">Recently Added</a>
+            </nav>
+        </div>
+        <main class="content">
+            <h1>My Favorite Sites</h1>
+            <div class="grid-container">
+                <div id="cards-grid" class="cards-grid">
+                    <!-- <div class="card">
+                    <div class="card-header">
+                      <h3>MDN Web Docs</h3>
+                      <span class="tag">Documentation</span>
+                    </div>
+                    <p>Resources for developers, by developers</p>
+                    <div class="card-actions">
+                      <button class="btn-visit">Visit Site</button>
+                      <button class="btn-favorite">★</button>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </main>
+        <div id="btn-open-modal" onclick="openModal();">+</div>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="interno">
+                    <span onclick="closeModal();" class="close">&times;</span>
+                    <h2>Add New Site</h2>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="site-name">Site Name</label>
+                            <input type="text" id="site-name" name="site-name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="site-url">Site URL</label>
+                            <input type="url" id="site-url" name="site-url" required />
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="site-category">Category</label>
+                            <select id="site-category" name="site-category">
+                                <option value="-1">Select Category</option>
+                            </select>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="site-tags">Description</label>
+                            <input type="text" id="site-descr" name="site-descr" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button id="add-site" class="btn-add" onclick="addLink();">Add Site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

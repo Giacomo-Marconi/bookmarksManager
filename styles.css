@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  padding: 2rem 1rem;
+  border-right: 1px solid #333;
+}
+
+.sidebar h2 {
+  color: #7c3aed;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-nav a {
+  color: #a0a0a0;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.sidebar-nav a.active {
+  background-color: #2d2d2d;
+  color: #7c3aed;
+}
+
+/* Main Content Styles */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 2vh;
+}
+
+h1 {
+    height: 5vh;
+    color: #7c3aed;
+}
+
+.grid-container{
+    width: 100%;
+    height: 85vh;
+    overflow-y: auto;
+    border-radius: 1rem;
+    padding: 2vh;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #7c3aed;
+  font-size: 1.25rem;
+}
+
+.tag {
+  background-color: #2d2d2d;
+  color: #7c3aed;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+.card p {
+  color: #a0a0a0;
+  margin-bottom: 1.5rem;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-visit {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-visit:hover {
+  background-color: #6d28d9;
+}
+
+.btn-favorite {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-favorite.active {
+  color: #fbbf24;
+}
+
+.btn-favorite:hover {
+  color: #fbbf24;
+}
+
+
+
+
+#btn-open-modal{
+    position: fixed;
+    right: 2vh;
+    bottom: 2vh;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    max-width: 10vw;
+    z-index: 1;
+}
+
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content{
+    background-color: #1e1e1e;
+    margin: 10% auto;
+    padding: 5vh;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    text-align: center;
+}
+
+.interno{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2vh;
+    text-align: center;
+}
+
+.modal-content h2{
+    color: #7c3aed;
+    width: 100%;
+}
+
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+label{
+    color: #7c3aed;
+    font-size: 1.25rem;
+}
+
+input[type="text"], input[type="url"]{
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #7c3aed;
+
+}
+
+select{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #7c3aed;
+}
+
+.modal-content button{
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    max-width: 10vw;
+}
+
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
