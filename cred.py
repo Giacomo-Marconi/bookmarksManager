@@ -1,6 +1,6 @@
 db_config = {
-    'host': 'host',
-    'user': 'user',
-    'password': 'password',
-    'database': 'database'
+    'host': 'figliolo.it',
+    'user': 'giacomo',
+    'password': 'figliolo',
+    'database': 'bookmarks'
 }
